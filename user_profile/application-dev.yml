@@ -1,3 +1,3 @@
 spring:
   application:
-    name: user_profile (D)
+    name: user_profile (dev)
