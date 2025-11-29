@@ -1,3 +1,8 @@
 spring:
-    profiles:
-    active: dev
+  config:
+    activate: 
+      on-profile: default
+
+logging:
+  level:
+    root: DEBUG
