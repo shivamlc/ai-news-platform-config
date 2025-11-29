@@ -26,7 +26,8 @@ management:
 logging:
   level:
     root: DEBUG
-
+    
+#  information  returned by /actuator/info
 info:
   app:
     name: User Profile Service (Default)
