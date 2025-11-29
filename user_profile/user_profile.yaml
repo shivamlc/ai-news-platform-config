@@ -26,3 +26,10 @@ management:
 logging:
   level:
     root: DEBUG
+
+info:
+  app:
+    name: User Profile Service (Default)
+    version: 1.0.0
+    description: User Profile Service for Ai news Platform (default profile)
+
