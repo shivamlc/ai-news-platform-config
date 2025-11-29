@@ -1,4 +1,4 @@
 spring:
-  profiles:
-    active: qa
-    
+  config:
+    activate: 
+      on-profile: qa
