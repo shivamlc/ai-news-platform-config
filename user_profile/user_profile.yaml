@@ -1,6 +1,6 @@
 spring:
   application:
-    name: user_profile (default)
+    name: user_profile
   profiles:
     active: default
 
