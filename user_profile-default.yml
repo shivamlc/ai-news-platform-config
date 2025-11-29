@@ -32,4 +32,4 @@ info:
   app:
     name: User Profile Service (Default)
     version: 1.0.0
-    description: User Profile Service for Ai news Platform (default profile)
+    description: User Profile Service for Ai news Platform (default profile - out)
