@@ -2,3 +2,10 @@ spring:
   config:
     activate: 
       on-profile: dev
+      
+#  information  returned by /actuator/info
+info:
+  app:
+    name: User Profile Service (Dev)
+    version: 1.0.0
+    description: User Profile Service for Ai news Platform (dev profile)
