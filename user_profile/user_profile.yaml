@@ -23,3 +23,6 @@ management:
     readiness-state: # determines if the application is ready to accept/serve network requests
       enabled: true #localhost:8071/actuator/health/readiness
 
+logging:
+  level:
+    root: DEBUG
