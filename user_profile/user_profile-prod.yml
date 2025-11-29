@@ -18,3 +18,10 @@ management:
 logging:
   level:
     root: INFO
+
+#  information  returned by /actuator/info
+info:
+  app:
+    name: User Profile Service (Prod)
+    version: 1.0.0
+    description: User Profile Service for Ai news Platform (prod profile)
