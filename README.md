@@ -10,7 +10,7 @@ Spring Cloud Config expects ONE of these correct patterns:
   user_profile/application-dev.yml
 
   ```
-  - Valid naming pattern 2:
+- Valid naming pattern 2:
   ```
   user_profile.yml
   user_profile-dev.yml
