@@ -33,9 +33,9 @@ logging:
   level:
     root: DEBUG
 
-endpoints:
-  shutdown:
-    enabled: true # enables actuator shutdown endpoint
+# endpoints:
+#   shutdown:
+#     enabled: true # enables actuator shutdown endpoint
     
 # information  returned by /actuator/info
 info:
