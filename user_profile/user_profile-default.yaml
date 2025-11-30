@@ -35,7 +35,7 @@ logging:
 
 endpoints:
   shutdown:
-    enabled: true
+    enabled: true # enables actuator shutdown endpoint
     
 # information  returned by /actuator/info
 info:
