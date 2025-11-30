@@ -18,6 +18,16 @@ management:
 logging:
   level:
     root: INFO
+    org.springframework.cloud.config: INFO
+    org.springframework.boot.context.config: INFO
+    org.springframework.core.env: INFO
+    org.springframework.web.client: INFO
+    org.springframework.http: INFO
+    org.springframework.web.client.RestTemplate: INFO
+    org.springframework.http.client: INFO
+    org.apache.http: INFO
+    org.apache.http.wire: INFO
+    org.springframework.core.env.PropertySourcesPropertyResolver: INFO
 
 #  information  returned by /actuator/info
 info:
