@@ -31,6 +31,16 @@ management:
 logging:
   level:
     root: DEBUG
+    org.springframework.cloud.config: TRACE
+    org.springframework.boot.context.config: TRACE
+    org.springframework.core.env: TRACE
+    org.springframework.web.client: TRACE
+    org.springframework.http: TRACE
+    org.springframework.web.client.RestTemplate: TRACE
+    org.springframework.http.client: DEBUG
+    org.apache.http: DEBUG
+    org.apache.http.wire: DEBUG
+    org.springframework.core.env.PropertySourcesPropertyResolver: TRACE
 
 endpoints:
   shutdown:
