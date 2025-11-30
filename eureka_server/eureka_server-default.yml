@@ -4,8 +4,8 @@ eureka:
   instance:
     hostname: localhost
   client:
-    fetchRegistry: false
-    registerWithEureka: false
+    fetchRegistry: false # eureka server does not need to call registry; its the client microservices that call registry
+    registerWithEureka: false # eureka server does not register itself with the registry; the client micro-services do
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
     
