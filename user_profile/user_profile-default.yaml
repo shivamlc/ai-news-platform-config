@@ -4,7 +4,7 @@ spring:
   config:
     activate:
       on-profile: default
-
+      
 # These settings are commonly used for easier monitoring and debugging in development or internal environments.
 # For production, you may want to restrict endpoint exposure for security.
 management:
@@ -12,8 +12,6 @@ management:
     env:
       enabled: true # enables the actuator's info endpoint
   endpoints:
-    # shutdown:
-    #   enabled: true # enables actuator shutdown endpoint
     web:
       exposure:
         include: "*" # This exposes all Spring Boot Actuator endpoints over HTTP (e.g., /actuator/health, /actuator/info, /actuator/bus/refresh, etc.).
