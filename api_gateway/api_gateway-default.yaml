@@ -21,6 +21,7 @@ management:
   endpoint:
     gateway:
       enabled: true # enables actuator gateway endpoint to monitor routes
+      access: unrestricted # allows access to gateway actuator endpoints without authentication
     health:
       show-details: always # This configures the /actuator/health endpoint to always show detailed health information, not just the overall status. This is useful for debugging and monitoring, as you’ll see details about each health indicator (e.g., disk space, database, config server status).
       probes:
@@ -44,10 +45,6 @@ logging:
     org.apache.http: DEBUG
     org.apache.http.wire: DEBUG
     org.springframework.core.env.PropertySourcesPropertyResolver: TRACE
-
-endpoints:
-  shutdown:
-    enabled: true # enables actuator shutdown endpoint
 
 # information  returned by /actuator/info
 info:
