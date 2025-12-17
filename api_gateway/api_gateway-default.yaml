@@ -19,9 +19,6 @@ management:
       exposure:
         include: "*" # This exposes all Spring Boot Actuator endpoints over HTTP (e.g., /actuator/health, /actuator/info, /actuator/bus/refresh, etc.).
   endpoint:
-    gateway:
-      enabled: true # enables actuator gateway endpoint to monitor routes
-      access: unrestricted # allows access to gateway actuator endpoints without authentication
     health:
       show-details: always # This configures the /actuator/health endpoint to always show detailed health information, not just the overall status. This is useful for debugging and monitoring, as you’ll see details about each health indicator (e.g., disk space, database, config server status).
       probes:
