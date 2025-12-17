@@ -1,0 +1,11 @@
+spring:
+  config:
+    activate:
+      on-profile: dev
+
+#  information  returned by /actuator/info
+info:
+  app:
+    name: Api Gateway Service (Dev)
+    version: 1.0.0
+    description: Api Gateway Service for Ai news Platform (dev profile)

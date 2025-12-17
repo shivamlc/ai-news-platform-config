@@ -1,0 +1,37 @@
+spring:
+  config:
+    activate:
+      on-profile: prod
+  # These settings are commonly used for easier monitoring and debugging in development or internal environments.
+# For production, you may want to restrict endpoint exposure for security.
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "info, health, refresh" # This exposes all Spring Boot Actuator endpoints over HTTP (e.g., /actuator/health, /actuator/info, /actuator/bus/refresh, etc.).
+  endpoint:
+    health:
+      show-details: always # This configures the /actuator/health endpoint to always show detailed health information, not just the overall status. This is useful for debugging and monitoring, as you’ll see details about each health indicator (e.g., disk space, database, config server status).
+      probes:
+        enabled: true
+
+logging:
+  level:
+    root: INFO
+    org.springframework.cloud.config: INFO
+    org.springframework.boot.context.config: INFO
+    org.springframework.core.env: INFO
+    org.springframework.web.client: INFO
+    org.springframework.http: INFO
+    org.springframework.web.client.RestTemplate: INFO
+    org.springframework.http.client: INFO
+    org.apache.http: INFO
+    org.apache.http.wire: INFO
+    org.springframework.core.env.PropertySourcesPropertyResolver: INFO
+
+#  information  returned by /actuator/info
+info:
+  app:
+    name: Api Gateway Service (Prod)
+    version: 1.0.0
+    description: Api Gateway Service for Ai news Platform (prod profile)

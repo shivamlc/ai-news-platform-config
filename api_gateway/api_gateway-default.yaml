@@ -1,0 +1,54 @@
+spring:
+  application:
+    name: api_gateway
+  config:
+    activate:
+      on-profile: default
+
+# These settings are commonly used for easier monitoring and debugging in development or internal environments.
+# For production, you may want to restrict endpoint exposure for security.
+management:
+  info:
+    env:
+      enabled: true # enables the actuator's info endpoint
+  endpoints:
+    web:
+      exposure:
+        include: "*" # This exposes all Spring Boot Actuator endpoints over HTTP (e.g., /actuator/health, /actuator/info, /actuator/bus/refresh, etc.).
+  endpoint:
+    shutdown:
+      access: unrestricted # when api_gateway shutsdown, this actuator endpoint helps this service to shut down gracefully
+    health:
+      show-details: always # This configures the /actuator/health endpoint to always show detailed health information, not just the overall status. This is useful for debugging and monitoring, as you’ll see details about each health indicator (e.g., disk space, database, config server status).
+      probes:
+        enabled: true
+  health:
+    liveness-state: # determines if the application is alive
+      enabled: true #localhost:8072/actuator/health/liveness
+    readiness-state: # determines if the application is ready to accept/serve network requests
+      enabled: true #localhost:8072/actuator/health/readiness
+
+logging:
+  level:
+    root: DEBUG
+    org.springframework.cloud.config: TRACE
+    org.springframework.boot.context.config: TRACE
+    org.springframework.core.env: TRACE
+    org.springframework.web.client: TRACE
+    org.springframework.http: TRACE
+    org.springframework.web.client.RestTemplate: TRACE
+    org.springframework.http.client: DEBUG
+    org.apache.http: DEBUG
+    org.apache.http.wire: DEBUG
+    org.springframework.core.env.PropertySourcesPropertyResolver: TRACE
+
+endpoints:
+  shutdown:
+    enabled: true # enables actuator shutdown endpoint
+
+# information  returned by /actuator/info
+info:
+  app:
+    name: Api Gateway Service (Default)
+    version: 1.0.0
+    description: Api Gateway Service for Ai news Platform (default profile)
