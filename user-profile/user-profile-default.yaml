@@ -1,10 +1,10 @@
 spring:
   application:
-    name: user_profile
+    name: user-profile
   config:
     activate:
       on-profile: default
-      
+
 # These settings are commonly used for easier monitoring and debugging in development or internal environments.
 # For production, you may want to restrict endpoint exposure for security.
 management:
